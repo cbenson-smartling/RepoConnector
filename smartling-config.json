@@ -6,12 +6,8 @@
     //    application - the corresponding locale name in your system. This value is used in the translation commit message
     "locales": [
          {
-             "smartling" : "zh-CN",
-             "application" : "zh-Hans"
-         },
-         {
-             "smartling" : "zh-TW",
-             "application" : "zh-Hant"
+             "smartling" : "fr-FR",
+             "application" : "fr-FR"
          }
      ],
 
@@ -42,7 +38,7 @@
          // Minimal recourse set definition. Translations won't be pushed back.
          {
             "type"      : "javaProperties",
-            "pathRegex" : "messages\\/.*\\.properties"
+            "pathRegex" : "*.properties"
          },
 
          // Translation set for docx files, translation results will be put to "translated" sub-folder and translated locale will be added to result file names.
@@ -74,7 +70,7 @@
          {
              "type"                      : "javaProperties",
              "authorizeContent"          : true,
-             "pathRegex"                 : "web\\/messages\\/en/(?<path>.*)\\.properties",
+             "pathRegex"                 : "*.properties",
              "translationPathExpression" : "web/messages/${locale}/${path}.${originalFile.extension}",
              "translationCommitMessage"  : "Task TRN-18 translate ${originalFile.name} to ${locale}\n${translatedFile.fullName}"
          },
@@ -93,8 +89,8 @@
             // If "locales" is defined then it overrides global configuration in the top of this config
             "locales": [
                 {
-                    "smartling" : "zh-CN",
-                    "application" : "zh-Hans"
+                    "smartling" : "fr-FR",
+                    "application" : "fr-FR"
                 }
             ],
          }
