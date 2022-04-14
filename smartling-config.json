@@ -38,7 +38,7 @@
          // Minimal recourse set definition. Translations won't be pushed back.
          {
             "type"      : "javaProperties",
-            "pathRegex" : "*.properties"
+            "pathRegex" : ".*.properties"
          },
 
          // Translation set for docx files, translation results will be put to "translated" sub-folder and translated locale will be added to result file names.
@@ -70,7 +70,7 @@
          {
              "type"                      : "javaProperties",
              "authorizeContent"          : true,
-             "pathRegex"                 : "*.properties",
+             "pathRegex"                 : ".*.properties",
              "translationPathExpression" : "web/messages/${locale}/${path}.${originalFile.extension}",
              "translationCommitMessage"  : "Task TRN-18 translate ${originalFile.name} to ${locale}\n${translatedFile.fullName}"
          },
@@ -80,7 +80,7 @@
          // Also files will be submitted only for zh-CN locale
          {
             "type"                      : "javaProperties",
-            "pathRegex"                 : "msg\\/.*\\.properties",
+            "pathRegex"                 : ".*.properties",
             "translationPathExpression" : "msg/${locale}/${originalFile.name}",
             "smartlingDirectives"       : [
                  "smartling.placeholder_format_custom = (\\$\\{[^\\}]+?\\})|(&[\\w\\d]+?;)",
