@@ -71,7 +71,7 @@
              "type"                      : "javaProperties",
              "authorizeContent"          : true,
              "pathRegex"                 : ".*.properties",
-             "translationPathExpression" : "${locale}/${originalFile.name}",
+             "translationPathExpression" : "${locale}_${originalFile.name}",
              "translationCommitMessage"  : "Task TRN-18 translate ${originalFile.name} to ${locale}\n${translatedFile.fullName}"
          },
 
@@ -81,7 +81,7 @@
          {
             "type"                      : "javaProperties",
             "pathRegex"                 : ".*.properties",
-            "translationPathExpression" : "${locale}/${originalFile.name}",
+            "translationPathExpression" : "${locale}_${originalFile.name}",
             "smartlingDirectives"       : [
                  "smartling.placeholder_format_custom = (\\$\\{[^\\}]+?\\})|(&[\\w\\d]+?;)",
                  "smartling.variants_enabled = true"
