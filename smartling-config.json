@@ -29,7 +29,7 @@
          {
             "type"                      : "javaProperties",
             "pathRegex"                 : ".*.properties",
-            "translationPathExpression" : "${locale}_$todaytest{originalFile.name}",
+            "translationPathExpression" : "${locale}_${originalFile.name}",
             "smartlingDirectives"       : [
                  "smartling.placeholder_format_custom = (\\$\\{[^\\}]+?\\})|(&[\\w\\d]+?;)",
                  "smartling.variants_enabled = true"
